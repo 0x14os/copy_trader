@@ -1,0 +1,33 @@
+{
+  "name": "copy_trader",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wowBlaBla/copy_trader.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wowBlaBla/copy_trader/issues"
+  },
+  "homepage": "https://github.com/wowBlaBla/copy_trader#readme",
+  "dependencies": {
+    "@ethereumjs/common": "^2.6.5",
+    "@ethereumjs/tx": "^3.5.2",
+    "abi-decoder": "^2.4.0",
+    "buffer": "^6.0.3",
+    "chalk": "^4.1.2",
+    "ethereumjs-tx": "^2.1.2",
+    "ethers": "^5.6.9",
+    "is-buffer": "^2.0.5",
+    "web3": "^1.7.4"
+  },
+  "devDependencies": {
+    "@alch/alchemy-web3": "^1.4.4"
+  }
+}
