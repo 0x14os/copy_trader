@@ -35,7 +35,7 @@ const loadDecodersFromABI = () => {
 }
 
 const loadContracts = () => {
-	console.log(`chalk`.yellow("Loading Contracts..."));
+	console.log(chalk.yellow("Loading Contracts..."));
 	
 	config.to_contractAddr_abi.forEach(data => {
 		const abi = JSON.parse(fs.readFileSync(`./abi/${data.abiFileName}`));
@@ -63,7 +63,8 @@ const startCopyTrading = () => {
 	const handleResponse = (response)=>{
 
 		response = JSON.parse(response);
-		
+		if(!response.params||!response.params.result)
+			return;
 		let result = response.params.result;
 		if(result.txContents.to==null){
 			return;
@@ -121,8 +122,8 @@ const startListeningBlock = () => {
 		timeBasedAutoSell();
 	}
 	
-	ws.on('open', proceed);
-	ws.on('message', handle);
+	wss.on('open', proceed);
+	wss.on('message', handle);
 	// provider.on("block", () => {
 	// 	// console.log(TxDataArray.length);
 
